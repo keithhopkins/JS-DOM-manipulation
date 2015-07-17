@@ -29,7 +29,7 @@ function countSelected(options){
   return num;
 }
 
-function sumSelect(options){
+function sumSelected(options){
   var sum=0;
   for(var i=0;i<options.length;i++){
     if(options[i].selected){
@@ -37,4 +37,13 @@ function sumSelect(options){
     }
   }
   return sum;
+}
+
+function averageAll(options){
+  var average=0;
+  for(var i=0;i<options.length;i++){
+    average += Number(options[i].value);
+  }
+  console.log(average);
+  return average/options.length;
 }
