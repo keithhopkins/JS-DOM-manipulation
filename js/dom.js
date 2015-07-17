@@ -17,15 +17,22 @@ var sumAllButton = document.getElementById('sum-all');
 sumAllButton.addEventListener("click",function(){sumAll(options);});
 // gets the count selected button and adds a click listener
 var countSelectedButton = document.getElementById('count-selected');
-countSelectedButton.addEventListener("click",function(){count(options);});
+countSelectedButton.addEventListener("click",function(){displayCountSelected(options);});
+// gets the sum selected button and adds a click listener
+var sumSelectedButton = document.getElementById('sum-selected');
+sumSelectedButton.addEventListener("click",function(){displaySumSelected(options);});
 
 function sumAll(opt){
   var total = sum(opt);
-  //displays to page
-  answerDiv.innerHTML=total;
+  answerDiv.innerHTML="$"+total;
 }
 
-function count(opt){
+function displayCountSelected(opt){
   var numSelected = countSelected(opt);
   answerDiv.innerHTML=numSelected;
+}
+
+function displaySumSelected(opt){
+  var sum = sumSelected(opt)
+  answerDiv.innerHTML="$"+sum;
 }

@@ -28,3 +28,13 @@ function countSelected(options){
   }
   return num;
 }
+
+function sumSelect(options){
+  var sum=0;
+  for(var i=0;i<options.length;i++){
+    if(options[i].selected){
+      sum+=Number(options[i].value);
+    }
+  }
+  return sum;
+}
