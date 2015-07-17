@@ -25,6 +25,8 @@ sumSelectedButton.addEventListener("click",function(){displaySumSelected(options
 var averageAllButton = document.getElementById('average-all');
 averageAllButton.addEventListener("click",function(){displayAverageAll(options);});
 
+var averageSelectedButton = document.getElementById('average-selected');
+averageSelectedButton.addEventListener("click",function(){displayAverageSelected(options);});
 function sumAll(opt){
   var total = sum(opt);
   answerDiv.innerHTML="$"+total;
@@ -42,5 +44,10 @@ function displaySumSelected(opt){
 
 function displayAverageAll(opt){
   var avg = averageAll(opt);
+  answerDiv.innerHTML = "$"+avg;
+}
+
+function displayAverageSelected(opt){
+  var avg = averageSelected(opt);
   answerDiv.innerHTML = "$"+avg;
 }

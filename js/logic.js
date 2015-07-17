@@ -40,10 +40,10 @@ function sumSelected(options){
 }
 
 function averageAll(options){
-  var average=0;
-  for(var i=0;i<options.length;i++){
-    average += Number(options[i].value);
-  }
-  console.log(average);
+  var average = sum(options);
   return average/options.length;
+}
+
+function averageSelected(options){
+  return sumSelected(options)/countSelected(options);
 }
