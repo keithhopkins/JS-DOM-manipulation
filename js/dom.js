@@ -9,3 +9,14 @@ Hints for the first problem:
     - takes the value returned by the `sum` function and displays it on the page
 
 */
+var button = document.getElementById('sum-all');
+var options = document.getElementsByName('prices');
+button.addEventListener("click",function(){sumAll(options);});
+
+
+function sumAll(opt){
+  var total = sum(opt);
+  //displays to page
+  var answerDiv = document.getElementById('answer');
+  answerDiv.innerHTML=total;
+}
