@@ -10,50 +10,52 @@ Hints for the first problem:
 
 */
 
+
 var answerDiv = document.getElementById('answer');
 var options = document.getElementsByName('prices')[0];
 
+
 // gets the sum-all button and adds a click listener
 var sumAllButton = document.getElementById('sum-all');
-sumAllButton.addEventListener("click",function(){sumAll(options);});
+sumAllButton.addEventListener("click",sumAll);
 
 // gets the count selected button and adds a click listener
 var countSelectedButton = document.getElementById('count-selected');
-countSelectedButton.addEventListener("click",function(){displayCountSelected(options);});
+countSelectedButton.addEventListener("click",displayCountSelected);
 
 // gets the sum selected button and adds a click listener
 var sumSelectedButton = document.getElementById('sum-selected');
-sumSelectedButton.addEventListener("click",function(){displaySumSelected(options);});
+sumSelectedButton.addEventListener("click",displaySumSelected);
 
 // gets the average-all button and adds a click listener
 var averageAllButton = document.getElementById('average-all');
-averageAllButton.addEventListener("click",function(){displayAverageAll(options);});
+averageAllButton.addEventListener("click",displayAverageAll);
 
 // gets the average-selected button and adds a click listener
 var averageSelectedButton = document.getElementById('average-selected');
-averageSelectedButton.addEventListener("click",function(){displayAverageSelected(options);});
+averageSelectedButton.addEventListener("click",displayAverageSelected);
 
-function sumAll(opt){
-  var total = sum(opt);
+function sumAll(){
+  var total = sum(options);
   answerDiv.innerHTML="$"+total;
 }
 
-function displayCountSelected(opt){
-  var numSelected = countSelected(opt);
+function displayCountSelected(){
+  var numSelected = countSelected(options);
   answerDiv.innerHTML=numSelected;
 }
 
-function displaySumSelected(opt){
-  var sum = sumSelected(opt)
+function displaySumSelected(){
+  var sum = sumSelected(options)
   answerDiv.innerHTML="$"+sum;
 }
 
-function displayAverageAll(opt){
-  var avg = averageAll(opt);
+function displayAverageAll(){
+  var avg = averageAll(options);
   answerDiv.innerHTML = "$"+avg;
 }
 
-function displayAverageSelected(opt){
-  var avg = averageSelected(opt);
+function displayAverageSelected(){
+  var avg = averageSelected(options);
   answerDiv.innerHTML = "$"+avg;
 }
