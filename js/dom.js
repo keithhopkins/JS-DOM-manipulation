@@ -12,21 +12,27 @@ Hints for the first problem:
 
 var answerDiv = document.getElementById('answer');
 var options = document.getElementsByName('prices')[0];
+
 // gets the sum-all button and adds a click listener
 var sumAllButton = document.getElementById('sum-all');
 sumAllButton.addEventListener("click",function(){sumAll(options);});
+
 // gets the count selected button and adds a click listener
 var countSelectedButton = document.getElementById('count-selected');
 countSelectedButton.addEventListener("click",function(){displayCountSelected(options);});
+
 // gets the sum selected button and adds a click listener
 var sumSelectedButton = document.getElementById('sum-selected');
 sumSelectedButton.addEventListener("click",function(){displaySumSelected(options);});
 
+// gets the average-all button and adds a click listener
 var averageAllButton = document.getElementById('average-all');
 averageAllButton.addEventListener("click",function(){displayAverageAll(options);});
 
+// gets the average-selected button and adds a click listener
 var averageSelectedButton = document.getElementById('average-selected');
 averageSelectedButton.addEventListener("click",function(){displayAverageSelected(options);});
+
 function sumAll(opt){
   var total = sum(opt);
   answerDiv.innerHTML="$"+total;
