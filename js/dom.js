@@ -10,10 +10,16 @@ Hints for the first problem:
 
 */
 
-
+//index page divs
 var answerDiv = document.getElementById('answer');
 var options = document.getElementsByName('prices')[0];
 
+// names.html divs
+var names = document.getElementsByName('names')[0].value;
+var answerUL = document.getElementById('answerUL');
+
+console.log(names);
+console.log(answerUL);
 
 // gets the sum-all button and adds a click listener
 var sumAllButton = document.getElementById('sum-all');
@@ -35,19 +41,25 @@ averageAllButton.addEventListener("click",displayAverageAll);
 var averageSelectedButton = document.getElementById('average-selected');
 averageSelectedButton.addEventListener("click",displayAverageSelected);
 
+//gets the all-names button and adds a click listener
+var allNamesButton = document.getElementById('all-names');
+allNamesButton.addEventListener('click',displayNames);
+
+
+
 function sumAll(){
   var total = sum(options);
-  answerDiv.innerHTML="$"+total;
+  answerDiv.innerHTML = "$"+total;
 }
 
 function displayCountSelected(){
   var numSelected = countSelected(options);
-  answerDiv.innerHTML=numSelected;
+  answerDiv.innerHTML = numSelected;
 }
 
 function displaySumSelected(){
   var sum = sumSelected(options)
-  answerDiv.innerHTML="$"+sum;
+  answerDiv.innerHTML = "$"+sum;
 }
 
 function displayAverageAll(){
@@ -58,4 +70,9 @@ function displayAverageAll(){
 function displayAverageSelected(){
   var avg = averageSelected(options);
   answerDiv.innerHTML = "$"+avg;
+}
+
+function displayNames(){
+  var nameList = namesList(names);
+
 }

@@ -47,3 +47,8 @@ function averageAll(options){
 function averageSelected(options){
   return sumSelected(options)/countSelected(options);
 }
+
+function namesList(names){
+  var nameList = names.split(" ");
+  console.log(nameList);
+}
