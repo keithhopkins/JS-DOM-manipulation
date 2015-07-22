@@ -49,6 +49,42 @@ function averageSelected(options){
 }
 
 function namesList(names){
-  var nameList = names.split(" ");
-  console.log(nameList);
+  var nameList = names.split("\n");
+  return nameList;
 }
+
+function firstNames(names){
+  var nameList = namesList(names);
+  var currentEl;
+  var firstNameList = [];
+  for(var i=0; i<nameList.length;i++){
+    currentEl = nameList[i].split(" ");
+    firstNameList.push(currentEl[0]);
+  }
+  return firstNameList;
+}
+
+function lastNames(names){
+  var nameList = namesList(names);
+  var currentEl;
+  var lastNameList = [];
+  for(var i=0; i<nameList.length;i++){
+    currentEl = nameList[i].split(" ");
+    lastNameList.push(currentEl[1]);
+  }
+  return lastNameList;
+}
+
+function nameLength(names){
+  var nameList = namesList(names);
+  for(var i=0;i<nameList.length;i++){
+    nameList[i] += ": "+nameList[i].length;
+  }
+  return nameList;
+}
+
+
+
+
+
+
